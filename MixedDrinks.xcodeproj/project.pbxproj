@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC4AA7901C3991E700AD1833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AA78F1C3991E700AD1833 /* AppDelegate.swift */; };
+		DC4AA7921C3991E700AD1833 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AA7911C3991E700AD1833 /* ViewController.swift */; };
+		DC4AA7951C3991E700AD1833 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4AA7931C3991E700AD1833 /* Main.storyboard */; };
+		DC4AA7981C3991E700AD1833 /* MixedDrinks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC4AA7961C3991E700AD1833 /* MixedDrinks.xcdatamodeld */; };
+		DC4AA79A1C3991E700AD1833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4AA7991C3991E700AD1833 /* Assets.xcassets */; };
+		DC4AA79D1C3991E700AD1833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4AA79B1C3991E700AD1833 /* LaunchScreen.storyboard */; };
+		DC4AA7A81C3991E800AD1833 /* MixedDrinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AA7A71C3991E800AD1833 /* MixedDrinksTests.swift */; };
+		DC4AA7B31C3991E800AD1833 /* MixedDrinksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AA7B21C3991E800AD1833 /* MixedDrinksUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC4AA7A41C3991E800AD1833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4AA7841C3991E700AD1833 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC4AA78B1C3991E700AD1833;
+			remoteInfo = MixedDrinks;
+		};
+		DC4AA7AF1C3991E800AD1833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC4AA7841C3991E700AD1833 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC4AA78B1C3991E700AD1833;
+			remoteInfo = MixedDrinks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC4AA78C1C3991E700AD1833 /* MixedDrinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixedDrinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4AA78F1C3991E700AD1833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC4AA7911C3991E700AD1833 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC4AA7941C3991E700AD1833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC4AA7971C3991E700AD1833 /* MixedDrinks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MixedDrinks.xcdatamodel; sourceTree = "<group>"; };
+		DC4AA7991C3991E700AD1833 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC4AA79C1C3991E700AD1833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC4AA79E1C3991E700AD1833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4AA7A31C3991E800AD1833 /* MixedDrinksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixedDrinksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4AA7A71C3991E800AD1833 /* MixedDrinksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedDrinksTests.swift; sourceTree = "<group>"; };
+		DC4AA7A91C3991E800AD1833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4AA7AE1C3991E800AD1833 /* MixedDrinksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixedDrinksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4AA7B21C3991E800AD1833 /* MixedDrinksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedDrinksUITests.swift; sourceTree = "<group>"; };
+		DC4AA7B41C3991E800AD1833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC4AA7891C3991E700AD1833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA7A01C3991E800AD1833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA7AB1C3991E800AD1833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC4AA7831C3991E700AD1833 = {
+			isa = PBXGroup;
+			children = (
+				DC4AA78E1C3991E700AD1833 /* MixedDrinks */,
+				DC4AA7A61C3991E800AD1833 /* MixedDrinksTests */,
+				DC4AA7B11C3991E800AD1833 /* MixedDrinksUITests */,
+				DC4AA78D1C3991E700AD1833 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC4AA78D1C3991E700AD1833 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AA78C1C3991E700AD1833 /* MixedDrinks.app */,
+				DC4AA7A31C3991E800AD1833 /* MixedDrinksTests.xctest */,
+				DC4AA7AE1C3991E800AD1833 /* MixedDrinksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC4AA78E1C3991E700AD1833 /* MixedDrinks */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AA78F1C3991E700AD1833 /* AppDelegate.swift */,
+				DC4AA7911C3991E700AD1833 /* ViewController.swift */,
+				DC4AA7931C3991E700AD1833 /* Main.storyboard */,
+				DC4AA7991C3991E700AD1833 /* Assets.xcassets */,
+				DC4AA79B1C3991E700AD1833 /* LaunchScreen.storyboard */,
+				DC4AA79E1C3991E700AD1833 /* Info.plist */,
+				DC4AA7961C3991E700AD1833 /* MixedDrinks.xcdatamodeld */,
+			);
+			path = MixedDrinks;
+			sourceTree = "<group>";
+		};
+		DC4AA7A61C3991E800AD1833 /* MixedDrinksTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AA7A71C3991E800AD1833 /* MixedDrinksTests.swift */,
+				DC4AA7A91C3991E800AD1833 /* Info.plist */,
+			);
+			path = MixedDrinksTests;
+			sourceTree = "<group>";
+		};
+		DC4AA7B11C3991E800AD1833 /* MixedDrinksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AA7B21C3991E800AD1833 /* MixedDrinksUITests.swift */,
+				DC4AA7B41C3991E800AD1833 /* Info.plist */,
+			);
+			path = MixedDrinksUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC4AA78B1C3991E700AD1833 /* MixedDrinks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC4AA7B71C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinks" */;
+			buildPhases = (
+				DC4AA7881C3991E700AD1833 /* Sources */,
+				DC4AA7891C3991E700AD1833 /* Frameworks */,
+				DC4AA78A1C3991E700AD1833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MixedDrinks;
+			productName = MixedDrinks;
+			productReference = DC4AA78C1C3991E700AD1833 /* MixedDrinks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC4AA7A21C3991E800AD1833 /* MixedDrinksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC4AA7BA1C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinksTests" */;
+			buildPhases = (
+				DC4AA79F1C3991E800AD1833 /* Sources */,
+				DC4AA7A01C3991E800AD1833 /* Frameworks */,
+				DC4AA7A11C3991E800AD1833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC4AA7A51C3991E800AD1833 /* PBXTargetDependency */,
+			);
+			name = MixedDrinksTests;
+			productName = MixedDrinksTests;
+			productReference = DC4AA7A31C3991E800AD1833 /* MixedDrinksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC4AA7AD1C3991E800AD1833 /* MixedDrinksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC4AA7BD1C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinksUITests" */;
+			buildPhases = (
+				DC4AA7AA1C3991E800AD1833 /* Sources */,
+				DC4AA7AB1C3991E800AD1833 /* Frameworks */,
+				DC4AA7AC1C3991E800AD1833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC4AA7B01C3991E800AD1833 /* PBXTargetDependency */,
+			);
+			name = MixedDrinksUITests;
+			productName = MixedDrinksUITests;
+			productReference = DC4AA7AE1C3991E800AD1833 /* MixedDrinksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC4AA7841C3991E700AD1833 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Rosie ";
+				TargetAttributes = {
+					DC4AA78B1C3991E700AD1833 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = D7CVTE2UQD;
+					};
+					DC4AA7A21C3991E800AD1833 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = D7CVTE2UQD;
+						TestTargetID = DC4AA78B1C3991E700AD1833;
+					};
+					DC4AA7AD1C3991E800AD1833 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = D7CVTE2UQD;
+						TestTargetID = DC4AA78B1C3991E700AD1833;
+					};
+				};
+			};
+			buildConfigurationList = DC4AA7871C3991E700AD1833 /* Build configuration list for PBXProject "MixedDrinks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC4AA7831C3991E700AD1833;
+			productRefGroup = DC4AA78D1C3991E700AD1833 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC4AA78B1C3991E700AD1833 /* MixedDrinks */,
+				DC4AA7A21C3991E800AD1833 /* MixedDrinksTests */,
+				DC4AA7AD1C3991E800AD1833 /* MixedDrinksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC4AA78A1C3991E700AD1833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4AA79D1C3991E700AD1833 /* LaunchScreen.storyboard in Resources */,
+				DC4AA79A1C3991E700AD1833 /* Assets.xcassets in Resources */,
+				DC4AA7951C3991E700AD1833 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA7A11C3991E800AD1833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA7AC1C3991E800AD1833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC4AA7881C3991E700AD1833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4AA7921C3991E700AD1833 /* ViewController.swift in Sources */,
+				DC4AA7901C3991E700AD1833 /* AppDelegate.swift in Sources */,
+				DC4AA7981C3991E700AD1833 /* MixedDrinks.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA79F1C3991E800AD1833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4AA7A81C3991E800AD1833 /* MixedDrinksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4AA7AA1C3991E800AD1833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4AA7B31C3991E800AD1833 /* MixedDrinksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC4AA7A51C3991E800AD1833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC4AA78B1C3991E700AD1833 /* MixedDrinks */;
+			targetProxy = DC4AA7A41C3991E800AD1833 /* PBXContainerItemProxy */;
+		};
+		DC4AA7B01C3991E800AD1833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC4AA78B1C3991E700AD1833 /* MixedDrinks */;
+			targetProxy = DC4AA7AF1C3991E800AD1833 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC4AA7931C3991E700AD1833 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC4AA7941C3991E700AD1833 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC4AA79B1C3991E700AD1833 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC4AA79C1C3991E700AD1833 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC4AA7B51C3991E800AD1833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC4AA7B61C3991E800AD1833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC4AA7B81C3991E800AD1833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MixedDrinks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC4AA7B91C3991E800AD1833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MixedDrinks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC4AA7BB1C3991E800AD1833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MixedDrinksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MixedDrinks.app/MixedDrinks";
+			};
+			name = Debug;
+		};
+		DC4AA7BC1C3991E800AD1833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MixedDrinksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MixedDrinks.app/MixedDrinks";
+			};
+			name = Release;
+		};
+		DC4AA7BE1C3991E800AD1833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MixedDrinksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MixedDrinks;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DC4AA7BF1C3991E800AD1833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MixedDrinksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hack.MixedDrinksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MixedDrinks;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC4AA7871C3991E700AD1833 /* Build configuration list for PBXProject "MixedDrinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4AA7B51C3991E800AD1833 /* Debug */,
+				DC4AA7B61C3991E800AD1833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC4AA7B71C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4AA7B81C3991E800AD1833 /* Debug */,
+				DC4AA7B91C3991E800AD1833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC4AA7BA1C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4AA7BB1C3991E800AD1833 /* Debug */,
+				DC4AA7BC1C3991E800AD1833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC4AA7BD1C3991E800AD1833 /* Build configuration list for PBXNativeTarget "MixedDrinksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4AA7BE1C3991E800AD1833 /* Debug */,
+				DC4AA7BF1C3991E800AD1833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC4AA7961C3991E700AD1833 /* MixedDrinks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC4AA7971C3991E700AD1833 /* MixedDrinks.xcdatamodel */,
+			);
+			currentVersion = DC4AA7971C3991E700AD1833 /* MixedDrinks.xcdatamodel */;
+			path = MixedDrinks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC4AA7841C3991E700AD1833 /* Project object */;
+}
