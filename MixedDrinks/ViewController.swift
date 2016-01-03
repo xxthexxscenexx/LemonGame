@@ -7,6 +7,8 @@
 //  Version 1/3/16.
 
 import UIKit
+import CoreData
+
 
 // Main View Controller
 class ViewController: UIViewController {
@@ -38,6 +40,7 @@ class Status: UIViewController {
     @IBOutlet weak var CurrentLemons: UILabel!
     @IBOutlet weak var CurrentSugar: UILabel!
     @IBOutlet weak var CurrentCubes: UILabel!
+    
     // Purchase supplies 
     @IBOutlet weak var BuyLemons: UILabel!
     @IBOutlet weak var BuySugar: UILabel!
@@ -106,6 +109,25 @@ class Play: UIViewController {
     }
     
     // Added Functions for the lemonade game
+    // LOG DATA
+    @IBAction func LogData(sender: UIButton) {
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        
+        let gameData = NSEntityDescription.insertNewObjectForEntityForName("SaveData", inManagedObjectContext: context) as NSObject
+        gameData.setValue("1.00", forKey: "money")
+        gameData.setValue("100", forKey: "amntLemons")
+        gameData.setValue("100", forKey: "amntSugar")
+        gameData.setValue("100", forKey: "amntCubes")
+        
+        do {
+            try context.save()
+        } catch {
+        }
+        
+        print(gameData)
+        print("Data Saved.")
+    }
     
     
     

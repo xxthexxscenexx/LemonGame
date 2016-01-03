@@ -127,7 +127,7 @@
                                     <rect key="frame" x="114" y="530" width="92" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="vg2-YP-Lms" kind="show" id="tF4-Ru-XGS"/>
+                                    <segue destination="vg2-YP-Lms" kind="show" id="dOg-0J-n2q"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-lX-3kt">
@@ -713,6 +713,16 @@
                                     <rect key="frame" x="20" y="176" width="280" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoZ-qQ-PCq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Log today's data."/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="520" width="118" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="LogData:" destination="1r5-0c-w0x" eventType="touchUpInside" id="JNM-2r-97D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -722,6 +732,7 @@
                                 <exclude reference="zYJ-3d-xbU"/>
                                 <exclude reference="yfx-8D-FZO"/>
                                 <exclude reference="Ara-RB-jFG"/>
+                                <exclude reference="CoZ-qQ-PCq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -731,6 +742,7 @@
                                 <include reference="zYJ-3d-xbU"/>
                                 <include reference="yfx-8D-FZO"/>
                                 <include reference="Ara-RB-jFG"/>
+                                <include reference="CoZ-qQ-PCq"/>
                             </mask>
                         </variation>
                     </view>
