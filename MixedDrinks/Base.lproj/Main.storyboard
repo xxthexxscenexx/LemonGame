@@ -44,16 +44,6 @@
                                     <rect key="frame" x="20" y="230" width="280" height="30"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-lX-3kt">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="382" width="166" height="30"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-Fl-m13">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,6 +130,16 @@
                                     <segue destination="vg2-YP-Lms" kind="show" id="tF4-Ru-XGS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-lX-3kt">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="382" width="166" height="30"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -147,7 +147,6 @@
                                 <exclude reference="xtD-cI-aOm"/>
                                 <exclude reference="D2f-gB-xQR"/>
                                 <exclude reference="JVu-lP-1zx"/>
-                                <exclude reference="ZCk-lX-3kt"/>
                                 <exclude reference="qoU-Fl-m13"/>
                                 <exclude reference="5lb-9h-5Nj"/>
                                 <exclude reference="20v-sf-CeT"/>
@@ -157,6 +156,7 @@
                                 <exclude reference="iVg-To-T0M"/>
                                 <exclude reference="YaI-9N-USr"/>
                                 <exclude reference="SQK-YC-dak"/>
+                                <exclude reference="ZCk-lX-3kt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -164,7 +164,6 @@
                                 <include reference="xtD-cI-aOm"/>
                                 <include reference="D2f-gB-xQR"/>
                                 <include reference="JVu-lP-1zx"/>
-                                <include reference="ZCk-lX-3kt"/>
                                 <include reference="qoU-Fl-m13"/>
                                 <include reference="5lb-9h-5Nj"/>
                                 <include reference="20v-sf-CeT"/>
@@ -174,18 +173,22 @@
                                 <include reference="iVg-To-T0M"/>
                                 <include reference="YaI-9N-USr"/>
                                 <include reference="SQK-YC-dak"/>
+                                <include reference="ZCk-lX-3kt"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="moneyMainView" destination="ZCk-lX-3kt" id="A5P-ed-FaX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.5" y="339"/>
         </scene>
-        <!--View Controller-->
+        <!--Status-->
         <scene sceneID="zeU-lZ-yEE">
             <objects>
-                <viewController id="vg2-YP-Lms" sceneMemberID="viewController">
+                <viewController id="vg2-YP-Lms" customClass="Status" customModule="MixedDrinks" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eq8-Jg-wIo"/>
                         <viewControllerLayoutGuide type="bottom" id="Jg5-UO-8ED"/>
@@ -604,10 +607,10 @@
             </objects>
             <point key="canvasLocation" x="817.5" y="335.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Play-->
         <scene sceneID="nUn-2f-1MM">
             <objects>
-                <viewController id="1r5-0c-w0x" sceneMemberID="viewController">
+                <viewController id="1r5-0c-w0x" customClass="Play" customModule="MixedDrinks" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qXr-72-wve"/>
                         <viewControllerLayoutGuide type="bottom" id="FE8-m9-YSB"/>
