@@ -9,6 +9,11 @@
 import UIKit
 import CoreData
 
+let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+let context: NSManagedObjectContext = appDel.managedObjectContext
+
+let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+
 // MAIN CONTROLLER
 class ViewController: UIViewController {
     // Variables for the Lemonade Game
@@ -45,11 +50,8 @@ class Status: UIViewController {
     }
     
     // Added Functions for the lemonade game
+    // SAVE amount of inventory at the start of the day 
     @IBAction func startDay(sender: UIButton) {
-        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        
-        let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
         
         newInventory.setValue(100, forKey: "lemons")
         newInventory.setValue(100, forKey: "cubes")
