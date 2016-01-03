@@ -177,9 +177,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="moneyMainView" destination="ZCk-lX-3kt" id="A5P-ed-FaX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,25 +323,12 @@
                                     <rect key="frame" x="20" y="314" width="106" height="30"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNJ-e1-4zZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="+"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="238" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="incLemons:" destination="vg2-YP-Lms" eventType="touchUpInside" id="Kpz-HY-IYk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slk-Y9-s8P">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="-"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="238" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="decLemons:" destination="vg2-YP-Lms" eventType="touchUpInside" id="ptC-mk-6YM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-Qx-rqM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -352,9 +336,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="276" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="incSugar:" destination="vg2-YP-Lms" eventType="touchUpInside" id="fZf-jY-f2u"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-TO-Owl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -362,9 +343,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="276" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="decSugar:" destination="vg2-YP-Lms" eventType="touchUpInside" id="EGV-CA-PYm"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYM-Rl-n6v">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -372,9 +350,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="314" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="incCubes:" destination="vg2-YP-Lms" eventType="touchUpInside" id="WuU-49-rdc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-tW-cjF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -382,9 +357,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="314" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="decCubes:" destination="vg2-YP-Lms" eventType="touchUpInside" id="OX6-vx-suu"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemons:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09o-t4-S0J">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -426,9 +398,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="380" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="subLemons:" destination="vg2-YP-Lms" eventType="touchUpInside" id="cCa-Ar-PCJ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lB-fj-iKi">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -436,10 +405,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="418" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="addSugar:" destination="vg2-YP-Lms" eventType="touchUpInside" id="Zze-vI-oDX"/>
-                                    <action selector="subLemons:" destination="vg2-YP-Lms" eventType="touchUpInside" id="KGH-4d-zc4"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goz-Sm-Kgz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -447,9 +412,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="418" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="subSugar:" destination="vg2-YP-Lms" eventType="touchUpInside" id="el7-9b-trr"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6A-e0-9Nl">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -467,9 +429,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="456" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="addCubes:" destination="vg2-YP-Lms" eventType="touchUpInside" id="S2U-Az-VAU"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-cR-KYv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -477,9 +436,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="456" width="30" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="subCubes:" destination="vg2-YP-Lms" eventType="touchUpInside" id="bNP-0r-dM2"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9s-2M-aZD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -488,6 +444,7 @@
                                     <rect key="frame" x="108" y="522" width="104" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="startDay:" destination="vg2-YP-Lms" eventType="touchUpInside" id="A3S-wJ-TPS"/>
                                     <segue destination="1r5-0c-w0x" kind="show" id="kAh-ge-xRO"/>
                                 </connections>
                             </button>
@@ -541,6 +498,13 @@
                                     <rect key="frame" x="172" y="418" width="90" height="30"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNJ-e1-4zZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="+"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="238" width="30" height="30"/>
+                                </variation>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sue-Nh-KFc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -569,7 +533,6 @@
                                 <exclude reference="itk-FH-rdi"/>
                                 <exclude reference="ueH-Wd-1Tz"/>
                                 <exclude reference="ZoV-DJ-8j0"/>
-                                <exclude reference="cNJ-e1-4zZ"/>
                                 <exclude reference="Slk-Y9-s8P"/>
                                 <exclude reference="zOx-Qx-rqM"/>
                                 <exclude reference="Mtg-TO-Owl"/>
@@ -591,6 +554,7 @@
                                 <exclude reference="atn-8i-q04"/>
                                 <exclude reference="hfB-Ts-hnv"/>
                                 <exclude reference="4w4-xR-4CD"/>
+                                <exclude reference="cNJ-e1-4zZ"/>
                                 <exclude reference="sue-Nh-KFc"/>
                             </mask>
                         </variation>
@@ -610,7 +574,6 @@
                                 <include reference="itk-FH-rdi"/>
                                 <include reference="ueH-Wd-1Tz"/>
                                 <include reference="ZoV-DJ-8j0"/>
-                                <include reference="cNJ-e1-4zZ"/>
                                 <include reference="Slk-Y9-s8P"/>
                                 <include reference="zOx-Qx-rqM"/>
                                 <include reference="Mtg-TO-Owl"/>
@@ -632,22 +595,15 @@
                                 <include reference="atn-8i-q04"/>
                                 <include reference="hfB-Ts-hnv"/>
                                 <include reference="4w4-xR-4CD"/>
+                                <include reference="cNJ-e1-4zZ"/>
                                 <include reference="sue-Nh-KFc"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="BuyCubes" destination="atn-8i-q04" id="QnC-Q2-d95"/>
-                        <outlet property="BuyLemons" destination="nlG-eB-hJ5" id="MIV-aF-Y3k"/>
-                        <outlet property="BuySugar" destination="1rN-8k-AI9" id="hsC-2k-5PS"/>
-                        <outlet property="CurrentCubes" destination="h7m-Pq-RpC" id="Gpz-EP-SpM"/>
-                        <outlet property="CurrentLemons" destination="sue-Nh-KFc" id="pL1-uC-Yy2"/>
-                        <outlet property="CurrentSugar" destination="sue-Nh-KFc" id="b5R-Z0-Xx7"/>
-                        <outlet property="MoneyStatus" destination="U3H-CE-s8n" id="3EQ-yU-Bxc"/>
-                        <outlet property="NumCubes" destination="a6A-e0-9Nl" id="lwo-Fo-Eub"/>
-                        <outlet property="NumLemons" destination="hfB-Ts-hnv" id="bFT-HR-Ivy"/>
-                        <outlet property="NumSugar" destination="4w4-xR-4CD" id="j0U-ge-KQL"/>
-                        <outlet property="incLemons" destination="cNJ-e1-4zZ" id="H6u-dG-ktn"/>
+                        <outlet property="amntCubes" destination="h7m-Pq-RpC" id="pJt-cI-oMa"/>
+                        <outlet property="amntLemons" destination="Bte-Mb-vCh" id="EP2-48-GpF"/>
+                        <outlet property="amntSugar" destination="sue-Nh-KFc" id="N2i-X5-m2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uiy-JU-dyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -713,6 +669,13 @@
                                     <rect key="frame" x="20" y="176" width="280" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X8-41-8IE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Log Data for the Day!"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="520" width="146" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -722,6 +685,7 @@
                                 <exclude reference="zYJ-3d-xbU"/>
                                 <exclude reference="yfx-8D-FZO"/>
                                 <exclude reference="Ara-RB-jFG"/>
+                                <exclude reference="3X8-41-8IE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -731,6 +695,7 @@
                                 <include reference="zYJ-3d-xbU"/>
                                 <include reference="yfx-8D-FZO"/>
                                 <include reference="Ara-RB-jFG"/>
+                                <include reference="3X8-41-8IE"/>
                             </mask>
                         </variation>
                     </view>

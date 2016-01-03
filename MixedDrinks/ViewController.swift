@@ -7,14 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-// Main View Controller
+// MAIN CONTROLLER
 class ViewController: UIViewController {
     // Variables for the Lemonade Game
-    @IBOutlet weak var moneyMainView: UILabel! // Money listed on main view
-    // Level
-    // Day 
-    // Time
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +27,12 @@ class ViewController: UIViewController {
 
 }
 
-// Status View Controller
+// STATUS CONTROLLER
 class Status: UIViewController {
     // Variables for the Lemonade Game
-    @IBOutlet weak var MoneyStatus: UILabel! // Money listed on status view 
-    // Current status for supplies
-    @IBOutlet weak var CurrentLemons: UILabel!
-    @IBOutlet weak var CurrentSugar: UILabel!
-    @IBOutlet weak var CurrentCubes: UILabel!
-    // Purchase supplies 
-    @IBOutlet weak var BuyLemons: UILabel!
-    @IBOutlet weak var BuySugar: UILabel!
-    @IBOutlet weak var BuyCubes: UILabel!
-    // Mix drinks 
-    @IBOutlet weak var NumLemons: UILabel!
-    @IBOutlet weak var NumSugar: UILabel!
-    @IBOutlet weak var NumCubes: UILabel!
+    @IBOutlet weak var amntLemons: UILabel!
+    @IBOutlet weak var amntSugar: UILabel!
+    @IBOutlet weak var amntCubes: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,42 +45,31 @@ class Status: UIViewController {
     }
     
     // Added Functions for the lemonade game
-    // Purchase supplies buttons 
-    @IBAction func incLemons(sender: UIButton) {
-    }
-    @IBAction func decLemons(sender: UIButton) {
-    }
-    @IBAction func incSugar(sender: UIButton) {
-    }
-    @IBAction func decSugar(sender: UIButton) {
-    }
-    @IBAction func incCubes(sender: UIButton) {
-    }
-    @IBAction func decCubes(sender: UIButton) {
-    }
-    
-    // Mix drinks buttons
-    @IBAction func addLemons(sender: UIButton) {
-    }
-    @IBAction func subLemons(sender: UIButton) {
-    }
-    @IBAction func addSugar(sender: UIButton) {
-    }
-    @IBAction func subSugar(sender: UIButton) {
-    }
-    @IBAction func addCubes(sender: UIButton) {
-    }
-    @IBAction func subCubes(sender: AnyObject) {
+    @IBAction func startDay(sender: UIButton) {
+        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+        
+        newInventory.setValue(100, forKey: "lemons")
+        newInventory.setValue(100, forKey: "cubes")
+        newInventory.setValue(100, forKey: "sugar")
+        
+        do {
+            try context.save()
+        } catch {
+        //error handling 
+        }
+        
+        print(newInventory)
+        print("Object saved")
     }
     
 }
 
-// Game Play View Controller
+// GAME CONTROLLER
 class Play: UIViewController {
     // Variables for the Lemonade Game
-    // Customers 
-    // Taste preference 
-    // Lemonade acidity and coldness
     
     override func viewDidLoad() {
         super.viewDidLoad()
