@@ -69,6 +69,11 @@ class Status: UIViewController {
         print(newInventory)
         print("Object saved")
         
+        // Clear text fields
+        amntCube.text = ""
+        amntLemon.text = ""
+        amntSugar.text = ""
+        
             } // end funct
     
     // LOAD inventory amounts
