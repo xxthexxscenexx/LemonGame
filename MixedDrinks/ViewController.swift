@@ -16,28 +16,70 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    } // end funct
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    } // end funct
     
     // Added Functions for the lemonade game
 
-}
+} // end class
+
+let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+// References the App Delegate
+let context: NSManagedObjectContext = appDel.managedObjectContext
+// References the Context / Information
 
 // STATUS CONTROLLER
 class Status: UIViewController {
-    // Variables for the Lemonade Game
+    // Variables for PURCHASE YOUR SUPPLIES
     @IBOutlet weak var amntLemon: UITextField!
     @IBOutlet weak var amntSugar: UITextField!
     @IBOutlet weak var amntCube: UITextField!
+    // Variables for CURRENT STATUS 
+    @IBOutlet weak var curLemon: UILabel!
+    @IBOutlet weak var curSugar: UILabel!
+    @IBOutlet weak var curCube: UILabel!
     
+    // Loads previous game data into the current status controller
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        // RETRIEVE Data that was saved
+        do {
+            let request = NSFetchRequest(entityName: "Inventory")
+            // ask for a request
+            let results:NSArray = try context.executeFetchRequest(request)
+            // store all information sent back into rsults
+            
+            if (results.count > 0){ // If there is information then print it out
+                for res in results{
+                    let lem = res.valueForKey("lemons")
+                    curLemon.text = (lem! as! String)
+                    let sug = res.valueForKey("sugar")
+                    curSugar.text = res.valueForKey("sugar")! as? String
+                    let cub = res.valueForKey("cubes")
+                    curCube.text = res.valueForKey("cubes")! as? String
+                    
+                    print("Lemons " + (lem! as! String)) // Print out information as strings
+                    print("Sugar " + (sug! as! String))
+                    print("Cubes " + (cub! as! String))
+                    
+                } // end for loop
+            }else{                  // If there is no information inform user
+                print("There are no results to load")
+            } // end if statement
+            
+        } catch {
+            //error handling
+            print("There was an error retrieving data.")
+        } // end do catch
+
+    } // end funct
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,13 +87,11 @@ class Status: UIViewController {
     }
     
     // Added Functions for the lemonade game
-    // SAVE amount of inventory at the start of the day 
+    // Add new purchases into the inventory 
+    // ** To be added ** update current inventory status
     @IBAction func startDay(sender: UIButton) {
-        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        // References the App Delegate
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        // References the Context / Information
         
+        // SAVE data
         let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
         // Add new inventory items to the database with context from Entity Inventory 
         
@@ -70,48 +110,20 @@ class Status: UIViewController {
         print("Object saved")
         
         // Clear text fields
-        amntCube.text = ""
-        amntLemon.text = ""
-        amntSugar.text = ""
+        //amntCube.text = ""
+        //amntLemon.text = ""
+        //amntSugar.text = ""
         
-            } // end funct
+    } // end funct
     
-    // LOAD inventory amounts
-    @IBAction func LoadData(sender: UIButton) {
-        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        // References the App Delegate
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        // References the Context / Information
-
-        // RETRIEVE Data that was saved
-        do {
-            let request = NSFetchRequest(entityName: "Inventory")
-            // ask for a request
-            let results:NSArray = try context.executeFetchRequest(request)
-            // store all information sent back into rsults
-            
-            if (results.count > 0){ // If there is information then print it out
-                for res in results{
-                    let lem = res.valueForKey("lemons")
-                    let sug = res.valueForKey("sugar")
-                    let cub = res.valueForKey("cubes")
-                    print("Lemons " + (lem! as! String)) // Print out information as strings 
-                    print("Sugar " + (sug! as! String))
-                    print("Cubes " + (cub! as! String))
-                    
-                } // end for loop
-            }else{                  // If there is no information inform user
-                print("There are no results to load")
-            } // end if statement
-            
-        } catch {
-            //error handling
-            print("There was an error retrieving data.")
-        } // end do catch
-
+    // ** To be added **  Link to next view controller 
+    // ** To be added **  Take in drink mixer amounts and subtract from current inventory amounts - update invn.
+    @IBAction func updateAndStart(sender: UIButton) {
     }
+
+
     
-}
+} // end class
 
 // GAME CONTROLLER
 class Play: UIViewController {
@@ -120,15 +132,13 @@ class Play: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    } // end funct
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    } // end funct
     
     // Added Functions for the lemonade game
     
-    
-    
-}
+} // end class
