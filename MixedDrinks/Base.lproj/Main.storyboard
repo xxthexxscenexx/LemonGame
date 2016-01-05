@@ -472,42 +472,47 @@
                                     <rect key="frame" x="134" y="228" width="30" height="30"/>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boO-zj-cx7">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiV-2Y-N5a">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Redo."/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="123" width="166" height="30"/>
+                                    <rect key="frame" x="59" y="525" width="105" height="35"/>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gv-El-cUR">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="162" width="166" height="30"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAk-Ki-rva">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.84343434340000001" green="0.84343434340000001" blue="0.84343434340000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <action selector="REDO:" destination="vg2-YP-Lms" eventType="touchUpInside" id="HBn-v3-3PK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-Kp-zZy">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="134" y="86" width="166" height="30"/>
                                 </variation>
-                            </label>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3a-qg-Sr0">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="124" width="166" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Aw-Z1-txb">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="162" width="166" height="30"/>
+                                </variation>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7U-r9-9KD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Start Day!"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="108" y="529" width="105" height="30"/>
+                                    <rect key="frame" x="157" y="528" width="105" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="updateAndStart:" destination="vg2-YP-Lms" eventType="touchUpInside" id="BEX-lZ-15x"/>
@@ -551,9 +556,10 @@
                                 <exclude reference="jhA-9b-GlZ"/>
                                 <exclude reference="AiD-nM-29M"/>
                                 <exclude reference="cNJ-e1-4zZ"/>
-                                <exclude reference="boO-zj-cx7"/>
-                                <exclude reference="3Gv-El-cUR"/>
-                                <exclude reference="NAk-Ki-rva"/>
+                                <exclude reference="hiV-2Y-N5a"/>
+                                <exclude reference="VTD-Kp-zZy"/>
+                                <exclude reference="E3a-qg-Sr0"/>
+                                <exclude reference="7Aw-Z1-txb"/>
                                 <exclude reference="b7U-r9-9KD"/>
                             </mask>
                         </variation>
@@ -593,9 +599,10 @@
                                 <include reference="jhA-9b-GlZ"/>
                                 <include reference="AiD-nM-29M"/>
                                 <include reference="cNJ-e1-4zZ"/>
-                                <include reference="boO-zj-cx7"/>
-                                <include reference="3Gv-El-cUR"/>
-                                <include reference="NAk-Ki-rva"/>
+                                <include reference="hiV-2Y-N5a"/>
+                                <include reference="VTD-Kp-zZy"/>
+                                <include reference="E3a-qg-Sr0"/>
+                                <include reference="7Aw-Z1-txb"/>
                                 <include reference="b7U-r9-9KD"/>
                             </mask>
                         </variation>
@@ -604,9 +611,9 @@
                         <outlet property="amntCube" destination="wbj-T3-IwJ" id="q3J-Nt-y5e"/>
                         <outlet property="amntLemon" destination="7pX-Ww-Xco" id="XMu-Ik-J17"/>
                         <outlet property="amntSugar" destination="soD-MJ-SoO" id="rhp-eQ-iBx"/>
-                        <outlet property="curCube" destination="3Gv-El-cUR" id="10S-Fm-KPI"/>
-                        <outlet property="curLemon" destination="NAk-Ki-rva" id="BZP-iB-qjN"/>
-                        <outlet property="curSugar" destination="boO-zj-cx7" id="TGx-Yo-TO3"/>
+                        <outlet property="curCube" destination="7Aw-Z1-txb" id="egr-ZD-x4e"/>
+                        <outlet property="curLemon" destination="VTD-Kp-zZy" id="a3A-Uw-JsX"/>
+                        <outlet property="curSugar" destination="E3a-qg-Sr0" id="BaZ-uO-247"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uiy-JU-dyT" userLabel="First Responder" sceneMemberID="firstResponder"/>

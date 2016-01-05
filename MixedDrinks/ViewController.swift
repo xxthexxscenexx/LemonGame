@@ -1,13 +1,19 @@
 //
 //  ViewController.swift
 //  MixedDrinks - Lemonade game
-//  Working on increment and decrement buttons
+//
 //  Created by Rosie  on 1/3/16.
 //  Copyright © 2016 Rosie . All rights reserved.
 //
 
 import UIKit
 import CoreData
+
+// GLOBAL VARIABLES 
+let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+// References the App Delegate
+let context: NSManagedObjectContext = appDel.managedObjectContext
+// References the Context / Information
 
 // MAIN CONTROLLER
 class ViewController: UIViewController {
@@ -27,10 +33,7 @@ class ViewController: UIViewController {
 
 } // end class
 
-let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-// References the App Delegate
-let context: NSManagedObjectContext = appDel.managedObjectContext
-// References the Context / Information
+
 
 // STATUS CONTROLLER
 class Status: UIViewController {
@@ -39,9 +42,9 @@ class Status: UIViewController {
     @IBOutlet weak var amntSugar: UITextField!
     @IBOutlet weak var amntCube: UITextField!
     // Variables for CURRENT STATUS 
-    @IBOutlet weak var curLemon: UILabel!
-    @IBOutlet weak var curSugar: UILabel!
-    @IBOutlet weak var curCube: UILabel!
+    @IBOutlet weak var curLemon: UITextField!
+    @IBOutlet weak var curSugar: UITextField!
+    @IBOutlet weak var curCube: UITextField!
     
     // Loads previous game data into the current status controller
     override func viewDidLoad() {
@@ -60,6 +63,7 @@ class Status: UIViewController {
                 for res in results{
                     let lem = res.valueForKey("lemons")
                     curLemon.text = (lem! as! String)
+                    
                     let sug = res.valueForKey("sugar")
                     curSugar.text = res.valueForKey("sugar")! as? String
                     let cub = res.valueForKey("cubes")
@@ -78,7 +82,7 @@ class Status: UIViewController {
             //error handling
             print("There was an error retrieving data.")
         } // end do catch
-
+        
     } // end funct
     
     override func didReceiveMemoryWarning() {
@@ -91,39 +95,88 @@ class Status: UIViewController {
     // ** To be added ** update current inventory status
     @IBAction func startDay(sender: UIButton) {
         
-        // SAVE data
-        let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
-        // Add new inventory items to the database with context from Entity Inventory 
-        
-        newInventory.setValue(amntLemon.text, forKey: "lemons")
-        newInventory.setValue(amntCube.text, forKey: "cubes")
-        newInventory.setValue(amntSugar.text, forKey: "sugar")
-        
+        // UPDATING after purchases
         do {
-            try context.save()
+            let request = NSFetchRequest(entityName: "Inventory")
+            // ask for a request
+            let results:NSArray = try context.executeFetchRequest(request)
+            // store all information sent back into rsults
+            
+            if (results.count > 0){ // If there is information then print it out
+                for res in results{
+                    
+                    // gets the last know values of the game
+                    let lem = res.valueForKey("lemons")
+                    let sug = res.valueForKey("sugar")
+                    let cub = res.valueForKey("cubes")
+                    
+                    let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+                    
+                    // Add new inventory items to the database with context from Entity Inventory
+                    // Adds the current data to the purchased amounts
+                    let aLem:Int = Int(curLemon.text!)! + Int(amntLemon.text!)!
+                    let aSug:Int = Int(curSugar.text!)! + Int(amntSugar.text!)!
+                    let aCub:Int = Int(curCube.text!)! + Int(amntCube.text!)!
+                    
+                    // Sets the new current data to the new amounts
+                    newInventory.setValue(String(aLem), forKey: "lemons")
+                    newInventory.setValue(String(aCub), forKey: "cubes")
+                    newInventory.setValue(String(aSug), forKey: "sugar")
+                    
+                    do {
+                        try context.save()
+                        
+                    } catch {
+                        //error handling
+                        print("There was an error saving data.")
+                    }
+                    
+                    print(newInventory)
+                    print("Object saved")
+                    
+                    print("Lemons " + (lem! as! String)) // Print out information as strings
+                    print("Sugar " + (sug! as! String))
+                    print("Cubes " + (cub! as! String))
+                    
+                } // end for loop
+            }else{                  // If there is no information inform user
+                print("There are no results to load")
+            } // end if statement
+            
         } catch {
-            //error handling 
-            print("There was an error saving data.")
-        }
-        
-        print(newInventory)
-        print("Object saved")
-        
-        // Clear text fields
-        //amntCube.text = ""
-        //amntLemon.text = ""
-        //amntSugar.text = ""
-        
+            //error handling
+            print("There was an error retrieving data.")
+        } // end do catch
+
     } // end funct
+
     
     // ** To be added **  Link to next view controller 
     // ** To be added **  Take in drink mixer amounts and subtract from current inventory amounts - update invn.
     @IBAction func updateAndStart(sender: UIButton) {
     }
-
-
+    
+    @IBAction func REDO(sender: UIButton) {
+        // Needed to delete core data and restart the game but once this is clicked, there is no data to load into the game 
+        /*
+        let request = NSFetchRequest(entityName: "Inventory")
+            
+        do {
+            let incidents = try context.executeFetchRequest(request)
+                
+            if incidents.count > 0 {
+                    
+                for result: AnyObject in incidents{
+                    context.deleteObject(result as! NSManagedObject)
+                    print("NSManagedObject has been Deleted")
+                }
+                try context.save() }
+        } catch {}
+        */
+    } // end fuct
     
 } // end class
+
 
 // GAME CONTROLLER
 class Play: UIViewController {
