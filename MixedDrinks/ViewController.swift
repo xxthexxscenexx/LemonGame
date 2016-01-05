@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  MixedDrinks - Lemonade game
-//
+//  Working on increment and decrement buttons
 //  Created by Rosie  on 1/3/16.
 //  Copyright © 2016 Rosie . All rights reserved.
 //
