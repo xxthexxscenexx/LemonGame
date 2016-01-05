@@ -7,14 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-// Main View Controller
+// MAIN CONTROLLER
 class ViewController: UIViewController {
     // Variables for the Lemonade Game
-    @IBOutlet weak var moneyMainView: UILabel! // Money listed on main view
-    // Level
-    // Day 
-    // Time
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +27,12 @@ class ViewController: UIViewController {
 
 }
 
-// Status View Controller
+// STATUS CONTROLLER
 class Status: UIViewController {
     // Variables for the Lemonade Game
-    @IBOutlet weak var MoneyStatus: UILabel! // Money listed on status view 
-    // Current status for supplies
-    @IBOutlet weak var CurrentLemons: UILabel!
-    @IBOutlet weak var CurrentSugar: UILabel!
-    @IBOutlet weak var CurrentCubes: UILabel!
-    // Purchase supplies 
-    @IBOutlet weak var BuyLemons: UILabel!
-    @IBOutlet weak var BuySugar: UILabel!
-    @IBOutlet weak var BuyCubes: UILabel!
-    // Mix drinks 
-    @IBOutlet weak var NumLemons: UILabel!
-    @IBOutlet weak var NumSugar: UILabel!
-    @IBOutlet weak var NumCubes: UILabel!
+    @IBOutlet weak var amntLemon: UITextField!
+    @IBOutlet weak var amntSugar: UITextField!
+    @IBOutlet weak var amntCube: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,42 +45,72 @@ class Status: UIViewController {
     }
     
     // Added Functions for the lemonade game
-    // Purchase supplies buttons 
-    @IBAction func incLemons(sender: UIButton) {
-    }
-    @IBAction func decLemons(sender: UIButton) {
-    }
-    @IBAction func incSugar(sender: UIButton) {
-    }
-    @IBAction func decSugar(sender: UIButton) {
-    }
-    @IBAction func incCubes(sender: UIButton) {
-    }
-    @IBAction func decCubes(sender: UIButton) {
-    }
+    // SAVE amount of inventory at the start of the day 
+    @IBAction func startDay(sender: UIButton) {
+        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        // References the App Delegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        // References the Context / Information
+        
+        let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+        // Add new inventory items to the database with context from Entity Inventory 
+        
+        newInventory.setValue(amntLemon.text, forKey: "lemons")
+        newInventory.setValue(amntCube.text, forKey: "cubes")
+        newInventory.setValue(amntSugar.text, forKey: "sugar")
+        
+        do {
+            try context.save()
+        } catch {
+            //error handling 
+            print("There was an error saving data.")
+        }
+        
+        print(newInventory)
+        print("Object saved")
+        
+            } // end funct
     
-    // Mix drinks buttons
-    @IBAction func addLemons(sender: UIButton) {
-    }
-    @IBAction func subLemons(sender: UIButton) {
-    }
-    @IBAction func addSugar(sender: UIButton) {
-    }
-    @IBAction func subSugar(sender: UIButton) {
-    }
-    @IBAction func addCubes(sender: UIButton) {
-    }
-    @IBAction func subCubes(sender: AnyObject) {
+    // LOAD inventory amounts
+    @IBAction func LoadData(sender: UIButton) {
+        let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        // References the App Delegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        // References the Context / Information
+
+        // RETRIEVE Data that was saved
+        do {
+            let request = NSFetchRequest(entityName: "Inventory")
+            // ask for a request
+            let results:NSArray = try context.executeFetchRequest(request)
+            // store all information sent back into rsults
+            
+            if (results.count > 0){ // If there is information then print it out
+                for res in results{
+                    let lem = res.valueForKey("lemons")
+                    let sug = res.valueForKey("sugar")
+                    let cub = res.valueForKey("cubes")
+                    print("Lemons " + (lem! as! String)) // Print out information as strings 
+                    print("Sugar " + (sug! as! String))
+                    print("Cubes " + (cub! as! String))
+                    
+                } // end for loop
+            }else{                  // If there is no information inform user
+                print("There are no results to load")
+            } // end if statement
+            
+        } catch {
+            //error handling
+            print("There was an error retrieving data.")
+        } // end do catch
+
     }
     
 }
 
-// Game Play View Controller
+// GAME CONTROLLER
 class Play: UIViewController {
     // Variables for the Lemonade Game
-    // Customers 
-    // Taste preference 
-    // Lemonade acidity and coldness
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,5 +127,3 @@ class Play: UIViewController {
     
     
 }
-
-
