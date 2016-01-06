@@ -140,7 +140,13 @@ class Status: UIViewController {
                     
                 } // end for loop
             }else{                  // If there is no information inform user
-                print("There are no results to load")
+                let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+                
+                // Add new inventory items to the database with context from Entity Inventory
+                // Adds the current data to the purchased amounts
+                newInventory.setValue("0", forKey: "lemons")
+                newInventory.setValue("0", forKey: "cubes")
+                newInventory.setValue("0", forKey: "sugar")
             } // end if statement
             
         } catch {
@@ -157,8 +163,7 @@ class Status: UIViewController {
     }
     
     @IBAction func REDO(sender: UIButton) {
-        // Needed to delete core data and restart the game but once this is clicked, there is no data to load into the game 
-        /*
+        // Needed to delete core data and restart the game but once this is clicked, then the data is set back to all zeros when the game realizes there is no previous data to retrieve 
         let request = NSFetchRequest(entityName: "Inventory")
             
         do {
@@ -172,7 +177,6 @@ class Status: UIViewController {
                 }
                 try context.save() }
         } catch {}
-        */
     } // end fuct
     
 } // end class
