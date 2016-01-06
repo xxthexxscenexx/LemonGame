@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MixedDrinks - Lemonade game
+//  MixedDrinks - Lemonade Game
 //
 //  Created by Rosie  on 1/3/16.
 //  Copyright © 2016 Rosie . All rights reserved.
@@ -163,7 +163,7 @@ class Status: UIViewController {
     }
     
     @IBAction func REDO(sender: UIButton) {
-        // Needed to delete core data and restart the game but once this is clicked, then the data is set back to all zeros when the game realizes there is no previous data to retrieve 
+        // Needed to delete core data and restart the game but once this is clicked, then the data is set back to all zeros when the game realizes there is no previous data to retrieve
         let request = NSFetchRequest(entityName: "Inventory")
             
         do {
