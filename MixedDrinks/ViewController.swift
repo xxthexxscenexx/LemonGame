@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MixedDrinks - Lemonade game
+//  MixedDrinks - Lemonade Game
 //
 //  Created by Rosie  on 1/3/16.
 //  Copyright © 2016 Rosie . All rights reserved.
