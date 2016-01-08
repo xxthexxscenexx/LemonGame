@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Darwin
 
 // GLOBAL VARIABLES 
 let appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -47,9 +48,7 @@ class Status: UIViewController {
     @IBOutlet weak var curCube: UITextField!
     
     // Loads previous game data into the current status controller
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
         
         // Do any additional setup after loading the view, typically from a nib.
         // RETRIEVE Data that was saved
@@ -75,7 +74,13 @@ class Status: UIViewController {
                     
                 } // end for loop
             }else{                  // If there is no information inform user
-                print("There are no results to load")
+                let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
+                
+                // Add new inventory items to the database with context from Entity Inventory
+                // Adds the current data to the purchased amounts
+                newInventory.setValue("0", forKey: "lemons")
+                newInventory.setValue("0", forKey: "cubes")
+                newInventory.setValue("0", forKey: "sugar")
             } // end if statement
             
         } catch {
@@ -138,15 +143,9 @@ class Status: UIViewController {
                     print("Sugar " + (sug! as! String))
                     print("Cubes " + (cub! as! String))
                     
+                    
                 } // end for loop
             }else{                  // If there is no information inform user
-                let newInventory = NSEntityDescription.insertNewObjectForEntityForName("Inventory", inManagedObjectContext: context)
-                
-                // Add new inventory items to the database with context from Entity Inventory
-                // Adds the current data to the purchased amounts
-                newInventory.setValue("0", forKey: "lemons")
-                newInventory.setValue("0", forKey: "cubes")
-                newInventory.setValue("0", forKey: "sugar")
             } // end if statement
             
         } catch {
@@ -177,6 +176,9 @@ class Status: UIViewController {
                 }
                 try context.save() }
         } catch {}
+        
+        exit(0)
+        
     } // end fuct
     
 } // end class
